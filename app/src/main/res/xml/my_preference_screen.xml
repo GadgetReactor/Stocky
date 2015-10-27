@@ -1,0 +1,23 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="first_preferencescreen">
+    <CheckBoxPreference
+        android:key="wifi enabled"
+        android:title="WiFi" />
+    <EditTextPreference
+        android:id="@+id/refreshSetting"
+        android:key="refresh_interval"
+        android:title="@string/refresh_interval"
+        android:summary="Change the refresh interval"
+        android:defaultValue="300"
+        android:numeric="integer"
+        android:maxLength="3"
+        />
+    <PreferenceScreen
+        android:key="second_preferencescreen"
+        android:title="WiFi settings">
+        <CheckBoxPreference
+            android:key="prefer wifi"
+            android:title="Prefer WiFi" />
+    </PreferenceScreen>
+</PreferenceScreen> 

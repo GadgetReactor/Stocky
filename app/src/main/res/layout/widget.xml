@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/stackWidgetView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/customshape"
+        android:paddingTop="62dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp">
+    </ListView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="STOCKY"
+        android:paddingLeft="10dp"
+        android:paddingTop="6dp"
+        android:background="@drawable/widgetbar"
+        android:textColor="@color/background_floating_material_light"
+        android:textStyle="bold"
+        android:id="@+id/textView3"
+        android:layout_gravity="left|top"
+        android:textSize="18sp" />
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/stackWidgetEmptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="10dp"
+        android:text="No information"
+        android:textColor="@color/background_floating_material_light"
+        android:paddingTop="28dp"
+        android:textSize="12sp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_margin="6dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/refresh"
+        android:id="@+id/button"
+        android:layout_gravity="right|top" />
+
+</FrameLayout>

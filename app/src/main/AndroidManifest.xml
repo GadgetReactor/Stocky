@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gadgetreactor.stocky" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_stocks"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+            <!-- StackWidget Provider -->
+            <receiver android:name="com.gadgetreactor.stocky.Widget">
+                <intent-filter>
+                    <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                </intent-filter>
+                <meta-data
+                    android:name="android.appwidget.provider"
+                    android:resource="@xml/appwidget_info" />
+            </receiver>
+
+            <!-- StackWidget Service -->
+            <service android:name="com.gadgetreactor.stocky.WidgetService"
+                android:permission="android.permission.BIND_REMOTEVIEWS"
+                android:exported="false" />
+
+        <activity
+            android:name="com.gadgetreactor.stocky.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.gadgetreactor.stocky.DetailActivity"
+            android:label="@string/activity_details"
+            android:parentActivityName="com.gadgetreactor.stocky.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gadgetreactor.stocky.MainActivity"/>
+        </activity>
+        <activity
+            android:name="com.gadgetreactor.stocky.SearchActivity"
+            android:label="@string/activity_search"
+            android:parentActivityName="com.gadgetreactor.stocky.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gadgetreactor.stocky.MainActivity"/>
+        </activity>
+
+        <activity
+            android:name="com.gadgetreactor.stocky.UserPreferenceActivity"
+            android:label="@string/activity_details"
+            android:parentActivityName="com.gadgetreactor.stocky.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.gadgetreactor.stocky.MainActivity"/>
+        </activity>
+    </application>
+</manifest>
